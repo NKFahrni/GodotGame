@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://font_22.tres" type="DynamicFont" id=1]
+[ext_resource path="res://img/BuyButton.png" type="Texture" id=2]
+[ext_resource path="res://shop.gd" type="Script" id=3]
+
+[node name="shop" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="BuyBtn" type="TextureButton" parent="."]
+anchor_right = 1.0
+margin_right = 340.0
+margin_bottom = 69.0
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buy1" type="Label" parent="BuyBtn"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -3.30115
+margin_top = -16.8877
+margin_right = 80.6989
+margin_bottom = 13.1123
+custom_fonts/font = ExtResource( 1 )
+text = "CPS + 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost" type="Label" parent="BuyBtn"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 3.77548
+margin_top = -30.0
+margin_right = 87.7755
+custom_fonts/font = ExtResource( 1 )
+text = "Cost: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lvl" type="Label" parent="BuyBtn"]
+margin_left = 3.77551
+margin_right = 87.7755
+margin_bottom = 30.0
+custom_fonts/font = ExtResource( 1 )
+text = "lvl: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="BuyBtn" to="." method="_on_TextureButton_pressed"]
